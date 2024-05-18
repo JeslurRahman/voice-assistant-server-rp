@@ -10,6 +10,10 @@ lemmatizer = WordNetLemmatizer()
 import pickle
 import numpy as np
 
+# Ensure necessary NLTK data is downloaded
+nltk.download('punkt')
+nltk.download('wordnet')
+
 #from keras.models import load_model
 from tensorflow.keras.models import load_model
 model = load_model('voicebot_model.h5')
